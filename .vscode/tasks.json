@@ -42,7 +42,7 @@
         },
         {
             "taskName": "flash",
-            "args": ["make flash"]
+            "args": ["make -j 7 flash"]
         }
     ]
 }
