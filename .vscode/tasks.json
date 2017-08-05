@@ -11,13 +11,14 @@
         "env": { 
             "IDF_PATH" : "${env:HOME}/esp/esp-idf", 
             "PYTHONPATH" : "/usr/local/lib/python2.7/site-packages",
-            "PATH" : "${env:PATH}:${env:HOME}/esp/xtensa-esp32-elf/bin" 
+            "PATH" : "${env:PATH}:${env:HOME}/esp/xtensa-esp32-elf/bin",
+            "MAKEFLAGS" : "${env:MAKEFLAGS} -j 7"
         }
     },
     "tasks": [
         {
             "taskName": "build",
-            "args": ["make -j 7"],
+            "args": ["make"],
             "isBuildCommand": true,
             "problemMatcher": {
                 "owner": "cpp",
@@ -42,7 +43,7 @@
         },
         {
             "taskName": "flash",
-            "args": ["make -j 7 flash"]
+            "args": ["make flash"]
         }
     ]
 }
