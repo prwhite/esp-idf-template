@@ -7,3 +7,14 @@ PROJECT_NAME := app-template
 
 include $(IDF_PATH)/make/project.mk
 
+clone: branch=$(shell git rev-parse --abbrev-ref HEAD)
+clone: 
+ifndef newname
+	$(error Please supply new project directory name with command line argument "newname=<target directory>") 	
+else
+	@echo Cloning project to directory $(newname) from branch $(branch)
+	mkdir -p $(newname)
+	git archive $(branch) | tar -xC $(newname)/
+	cd $(newname) ; git init ; git add . ; git commit -m "imported from template"
+endif
+
