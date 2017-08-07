@@ -9,8 +9,8 @@
                 "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
                 "/usr/include",
                 "${workspaceRoot}",
-                "${env:HOME}/esp/esp-idf/components/", 
-                "${env:HOME}/esp/xtensa-esp32-elf/"
+                "~/esp/esp-idf/components/", 
+                "~/esp/xtensa-esp32-elf/"
             ],
             "defines": [],
             "intelliSenseMode": "clang-x64",
@@ -22,8 +22,8 @@
                     "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
                     "/usr/include",
                     "${workspaceRoot}",
-                    "${env:HOME}/esp/esp-idf/components/", 
-                    "${env:HOME}/esp/xtensa-esp32-elf/"
+                    "~/esp/esp-idf/components/", 
+                    "~/esp/xtensa-esp32-elf/"
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
