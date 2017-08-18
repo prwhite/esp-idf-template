@@ -15,6 +15,7 @@ else
 	@echo Cloning project to directory $(newname) from branch $(branch)
 	mkdir -p $(newname)
 	git archive $(branch) | tar -xC $(newname)/
+	cd $(newname) ; sed -i '' 's/app-template/$(notdir $(newname))/g' Makefile
 	cd $(newname) ; git init ; git add . ; git commit -m "imported from template"
 endif
 
